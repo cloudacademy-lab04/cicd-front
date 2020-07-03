@@ -17,10 +17,10 @@ containerTemplate(name: 'kubectl', image: 'roffe/kubectl', command: 'cat', ttyEn
 
 		// #1 Github 소스 가져오기
 		stage('Get Source'){
-			git credentialsId: 'github-auth', url: 'https://github.com/haydenlee0/cicd-front', branch: 'master'
+			git credentialsId: 'github-lab04', url: 'https://github.com/cloudacademy-lab04/cicd-front.git', branch: 'master'
 		}
 		// #2 Properties 파일 읽기		
-		def props = readProperties file:"./kubernetes/pipeline.properties"
+		def props = readProperties file:"./Kubernetes/pipeline.properties"
 		def tag = props["version"]
 		def dockerRegistry = props["dockerRegistry"]
 		def credentialRegistry=props["credentialRegistry"]
