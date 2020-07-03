@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: frontend-lab04
+  name: front-lab04
   labels:
-    app: frontend-lab04
+    app: front-lab04
 spec:
   selector:
     matchLabels:
-      app: frontend-lab04
+      app: front-lab04
   replicas: 1
   template:
     metadata:
       labels:
-        app: frontend-lab04
+        app: front-lab04
     spec:
       containers:
-        - name: frontend-lab04
+        - name: front-lab04
           image: euijeonggo/front-service
           imagePullPolicy: Always
           ports:
