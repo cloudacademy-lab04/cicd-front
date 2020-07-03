@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-lab04
+  labels:
+    app: frontend-lab04
+spec:
+  selector:
+    matchLabels:
+      app: frontend-lab04
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: frontend-lab04
+    spec:
+      containers:
+        - name: frontend-lab04
+          image: hdlee/front-service
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3000
