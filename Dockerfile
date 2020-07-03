@@ -1,5 +1,5 @@
 FROM node:8.11.3
-MAINTAINER Kisoong Jang <kisjang@kr.ibm.com>
+MAINTAINER EuiJeong Go <ejgo@kr.ibm.com>
 
 RUN mkdir -p /app
 WORKDIR /app
